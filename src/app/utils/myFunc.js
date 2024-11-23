@@ -3,11 +3,12 @@ import path from "path";
 
 export async function fetchCategories() {
   const dbPath = path.join(process.cwd(), "public", "db", "dua_main.sqlite");
-
   const db = new Database(dbPath, { readonly: true });
+
   try {
     const query = "SELECT * FROM category";
     const categories = db.prepare(query).all();
+
     return categories;
   } catch (error) {
     console.error("Error fetching categories:", error);
@@ -20,9 +21,9 @@ export async function fetchCategories() {
 export async function fetchCategoryWiseData(cat_id) {
   const dbPath = path.join(process.cwd(), "public", "db", "dua_main.sqlite");
   const db = new Database(dbPath, { readonly: true });
+
   try {
     const subCategories = db.prepare(`SELECT * FROM sub_category WHERE cat_id = ?`).all(cat_id);
-
     const duas = db.prepare(`SELECT * FROM dua WHERE cat_id = ?`).all(cat_id);
 
     // Group duas by subcat_id

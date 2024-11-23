@@ -22,8 +22,6 @@ const CategoryViewer = ({ category }) => {
     }
   }, [selectedCategory]);
 
-  console.log("categoryData=>", categoryData);
-
   return (
     <>
       <div

@@ -30,7 +30,6 @@ const SubCatViewer = ({ data }) => {
     router.push(`${pathname}?${currentParams.toString()}`);
   };
 
-  console.log("subcatData=>", subcatData);
   return (
     <>
       <div

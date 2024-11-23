@@ -14,7 +14,7 @@ export default async function Categories() {
           <RxCross1 size={24} />
         </label>
       </div>
-      <div className="hidden relative p-3">
+      <div className="hidden min-[1140px]:block relative p-3">
         <span className="absolute top-1/2 -translate-y-1/2 left-4 p-3  rounded-md cursor-pointer">
           <Image src="/icons/search.png" alt="search" width={16} height={16} />
         </span>

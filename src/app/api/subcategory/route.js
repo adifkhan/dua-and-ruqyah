@@ -9,7 +9,6 @@ export async function GET(req, res) {
     const subcat_id = searchParams.get("subcat_id");
 
     const dbPath = path.join(process.cwd(), "public", "db", "dua_main.sqlite");
-
     const db = new Database(dbPath, { readonly: true });
 
     const query = "SELECT * FROM dua WHERE subcat_id = ?";

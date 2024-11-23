@@ -82,7 +82,7 @@ const Dua = ({ dua }) => {
             </div>
           )}
         </div>
-        <div className="flex items-center gap-8">
+        <div className={`${isPlay ? "hidden" : "flex"} items-center gap-8`}>
           <Image src="/icons/copy.png" alt="copy" width={18} height={18} />
           <Image src="/icons/bookmark.png" alt="bookmark" width={18} height={18} />
           <Image src="/icons/memorize.png" alt="memorize" width={18} height={18} />

@@ -1,12 +1,8 @@
-"use client";
-
-import Image from "next/image";
 import React from "react";
 import { RiSettings5Fill } from "react-icons/ri";
 import Settings from "./Settings";
 
 const SettingsDrawer = () => {
-  const [activeSetting, setActiveSetting] = React.useState("language");
   return (
     <div className="drawer drawer-end w-fit min-[1640px]:hidden z-10">
       <input id="setting_drawer" type="checkbox" className="drawer-toggle" />

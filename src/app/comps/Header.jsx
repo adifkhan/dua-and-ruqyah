@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import React from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
@@ -31,15 +29,63 @@ const Header = () => {
           </span>
         </div>
       </div>
-      {/* w-[270px] min-[1920px]:w-[300px] */}
-      <div className="flex flex-row-reverse min-[1280px]:flex-row items-center justify-end gap-5">
-        <div className="hidden min-[768px]:flex items-center gap-1 cursor-pointer">
-          <span>
-            <Image src="/icons/user.png" alt="user" width={45} height={45} />
-          </span>
-          <span>
-            <TiArrowSortedDown size={20} />
-          </span>
+      <div className="flex flex-row-reverse min-[1280px]:flex-row items-center justify-end gap-5 min-[1280px]:w-[200px] min-[1640px]:w-[270px] min-[1920px]:w-[300px]">
+        <div className="dropdown dropdown-end">
+          <div tabIndex={0} role="button" className="hidden min-[768px]:flex items-center gap-1">
+            <span className="">
+              <Image src="/icons/user.png" alt="user" width={45} height={45} className="z-[1]" />
+            </span>
+            <span>
+              <TiArrowSortedDown size={20} />
+            </span>
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content top-[50px] menu bg-white rounded-box z-[1] w-72 p-2 shadow"
+          >
+            <li>
+              <div>
+                <Image src="/icons/support.svg" alt="search" width={16} height={16} />
+                <a>Support Us</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <Image src="/icons/download.svg" alt="search" width={16} height={16} />
+                <a>Download Dua App</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <Image src="/icons/privacy.svg" alt="search" width={16} height={16} />
+                <a>Privacy Policy</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <Image src="/icons/credit.svg" alt="search" width={16} height={16} />
+                <a>Thanks & Credits</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <Image src="/icons/about.svg" alt="search" width={16} height={16} />
+                <a>About Us</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <Image src="/icons/copyright.svg" alt="search" width={16} height={16} />
+                <a>Copywrite Warning</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <Image src="/icons/projects.svg" alt="search" width={16} height={16} />
+                <a>Our Other Projects</a>
+              </div>
+            </li>
+          </ul>
         </div>
         <SettingsDrawer />
       </div>
