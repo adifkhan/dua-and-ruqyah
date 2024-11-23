@@ -38,11 +38,11 @@ const CategoryViewer = ({ category }) => {
           <Image src="/icons/category.png" alt="category_icon" width={40} height={40} />
         </div>
         <div className="flex-1 ">
-          <h2 className="font-semibold">{category.cat_name_en}</h2>
+          <p className="font-semibold">{category.cat_name_en}</p>
           <p className="text-sm text-[var(--neutral)]">Subcategory : {category.no_of_subcat}</p>
         </div>
         <div>
-          <h2 className="text-center font-semibold">{category.no_of_dua}</h2>
+          <p className="text-center font-semibold">{category.no_of_dua}</p>
           <p className="text-center text-sm text-[var(--neutral)]">Duas</p>
         </div>
       </div>

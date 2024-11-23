@@ -10,9 +10,9 @@ const Dua = ({ dua }) => {
     <div className="flex flex-col gap-7 bg-white font-medium p-5 rounded-xl">
       <div className="flex items-center gap-3">
         <Image src="/icons/allah.png" alt="Allah" width={35} height={35} />
-        <h4 className="text-[var(--accent)]">
+        <p className="text-[var(--accent)]">
           {dua?.dua_id}. {dua?.dua_name_en}
-        </h4>
+        </p>
       </div>
       <div>
         <p className="text-justify text-black leading-8">{dua?.top_en}</p>
@@ -82,7 +82,7 @@ const Dua = ({ dua }) => {
             </div>
           )}
         </div>
-        <div className={`${isPlay ? "hidden" : "flex"} items-center gap-8`}>
+        <div className={`${isPlay ? "hidden" : "flex"} min-[640px]:flex items-center gap-8`}>
           <Image src="/icons/copy.png" alt="copy" width={18} height={18} />
           <Image src="/icons/bookmark.png" alt="bookmark" width={18} height={18} />
           <Image src="/icons/memorize.png" alt="memorize" width={18} height={18} />

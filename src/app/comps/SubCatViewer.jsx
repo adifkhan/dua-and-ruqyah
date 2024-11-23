@@ -40,13 +40,13 @@ const SubCatViewer = ({ data }) => {
           handleAddQuery("subcat", data.subcat_id);
         }}
       >
-        <h4
+        <p
           className={`text-sm font-medium ${
             selectedSubCat === data.subcat_id && "text-[var(--accent)]"
           }`}
         >
           {data.subcat_name_en}
-        </h4>
+        </p>
       </div>
       <div
         className={`flex-col gap-3 py-2 pr-2 pl-5 ${

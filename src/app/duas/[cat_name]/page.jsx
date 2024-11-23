@@ -16,7 +16,7 @@ export default async function Page({ params, searchParams }) {
     <div className="flex flex-col gap-5 px-3">
       <div className="flex min-[1140px]:hidden items-center gap-3  bg-white font-medium p-4 rounded-xl">
         <CategoryDrawer />
-        <h4>{cat_name.split("%20").join(" ")}</h4>
+        <p>{cat_name.split("%20").join(" ")}</p>
       </div>
       {categoryData?.length > 0 &&
         categoryData?.map((subcat, i) => <DuaGallery key={i} subcat={subcat} />)}

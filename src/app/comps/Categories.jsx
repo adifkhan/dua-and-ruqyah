@@ -9,7 +9,7 @@ export default async function Categories() {
   return (
     <div className="category_wrapper flex flex-col w-full min-[640px]:w-[60%] min-[768px]:w-[45%] min-[1140px]:w-[350px] bg-white min-[1140px]:rounded-3xl overflow-hidden">
       <div className="flex items-center justify-between bg-[var(--accent)] text-white p-4">
-        <h4 className="text-lg font-semibold text-center ">Categories</h4>
+        <p className="text-lg font-semibold text-center ">Categories</p>
         <label htmlFor="category_drawer" className="min-[1140px]:hidden">
           <RxCross1 size={24} />
         </label>
