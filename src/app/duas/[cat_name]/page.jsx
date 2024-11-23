@@ -19,7 +19,15 @@ export default async function Page({ params, searchParams }) {
         <p>{cat_name.split("%20").join(" ")}</p>
       </div>
       {categoryData?.length > 0 &&
-        categoryData?.map((subcat, i) => <DuaGallery key={i} subcat={subcat} />)}
+        categoryData?.map((subcategory, i) => (
+          <DuaGallery
+            key={i}
+            subcategory={subcategory}
+            cat_id={cat}
+            subcat_id={subcat}
+            dua_id={dua}
+          />
+        ))}
     </div>
   );
 }

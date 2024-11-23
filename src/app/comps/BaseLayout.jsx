@@ -15,7 +15,11 @@ const BaseLayout = ({ children }) => {
           <div className="hidden min-[1140px]:block">
             <Categories />
           </div>
-          <main className="flex-1 pb-20 overflow-scroll" style={{ height: "calc(100vh - 110px)" }}>
+          <main
+            id="page_scroller"
+            className="flex-1 pb-20 overflow-scroll"
+            style={{ height: "calc(100vh - 110px)" }}
+          >
             {children}
           </main>
           <div className="hidden min-[1640px]:block h-full">

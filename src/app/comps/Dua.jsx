@@ -8,7 +8,7 @@ const Dua = ({ dua }) => {
 
   return (
     <div className="flex flex-col gap-7 bg-white font-medium p-5 rounded-xl">
-      <div className="flex items-center gap-3">
+      <div id={"dua_" + dua?.dua_id} className="flex items-center gap-3">
         <Image src="/icons/allah.png" alt="Allah" width={35} height={35} />
         <p className="text-[var(--accent)]">
           {dua?.dua_id}. {dua?.dua_name_en}

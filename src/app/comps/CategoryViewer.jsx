@@ -25,7 +25,7 @@ const CategoryViewer = ({ category }) => {
   return (
     <>
       <div
-        className={`flex items-center justify-between gap-3 p-3 cursor-pointer rounded-2xl ${
+        className={`flex items-center justify-between gap-3 p-3 cursor-pointer rounded-2xl hover:bg-[var(--background)] ${
           selectedCategory === category.cat_id ? "bg-[var(--background)]" : ""
         }`}
         onClick={(e) => {

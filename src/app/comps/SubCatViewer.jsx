@@ -41,7 +41,7 @@ const SubCatViewer = ({ data }) => {
         }}
       >
         <p
-          className={`text-sm font-medium ${
+          className={`text-sm font-medium hover:text-[var(--accent)] ${
             selectedSubCat === data.subcat_id && "text-[var(--accent)]"
           }`}
         >
@@ -65,7 +65,7 @@ const SubCatViewer = ({ data }) => {
           >
             <Image src="/icons/duaarrow.svg" alt="downarrow" width={15} height={15} />
             <p
-              className={`text-sm font-medium ${
+              className={`text-sm font-medium hover:text-[var(--accent)] ${
                 selectedDua === subcat.dua_id && "text-[var(--accent)]"
               }`}
             >
