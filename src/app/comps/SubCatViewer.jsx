@@ -16,13 +16,13 @@ const SubCatViewer = ({ data }) => {
 
   React.useEffect(() => {
     try {
-      fetch(`/api/subcategory?subcat_id=${data?.subcat_id}`)
+      fetch(`/api/subcategory?subcat_id=${selectedSubCat}`)
         .then((res) => res.json())
         .then((data) => setSubcatData(data));
     } catch (error) {
       console.log(error);
     }
-  }, [data?.subcat_id, selectedSubCat]);
+  }, [selectedSubCat]);
 
   const handleAddQuery = (queryName, queryValue) => {
     const currentParams = new URLSearchParams(searchParams.toString());
@@ -30,6 +30,7 @@ const SubCatViewer = ({ data }) => {
     router.push(`${pathname}?${currentParams.toString()}`);
   };
 
+  console.log("subcatData=>", subcatData);
   return (
     <>
       <div

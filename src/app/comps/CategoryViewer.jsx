@@ -14,13 +14,15 @@ const CategoryViewer = ({ category }) => {
 
   React.useEffect(() => {
     try {
-      fetch(`/api/categories?cat_id=${category?.cat_id}`)
+      fetch(`/api/categories?cat_id=${selectedCategory}`)
         .then((res) => res.json())
         .then((data) => setCategoryData(data));
     } catch (error) {
       console.log(error);
     }
-  }, [category?.cat_id, selectedCategory]);
+  }, [selectedCategory]);
+
+  console.log("categoryData=>", categoryData);
 
   return (
     <>
