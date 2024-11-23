@@ -30,7 +30,7 @@ export async function fetchCategoryWiseData(cat_id) {
       return acc;
     }, {});
 
-    const subCategoriesWithDuas = subCategories.map((subcat) => ({
+    const subCategoriesWithDuas = subCategories?.map((subcat) => ({
       ...subcat,
       duas: duasGroupedBySubcat[subcat.subcat_id] || [],
     }));

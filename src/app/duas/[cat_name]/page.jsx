@@ -1,11 +1,10 @@
 import CategoryDrawer from "@/app/comps/CategoryDrawer";
 import DuaGallery from "@/app/comps/DuaGallery";
 import { fetchCategories, fetchCategoryWiseData } from "@/app/utils/myFunc";
-import { IoMenuOutline } from "react-icons/io5";
 
 export async function generateStaticParams() {
   const categories = await fetchCategories();
-  return categories.map((category) => ({ cat_name: category.cat_name_en }));
+  return categories?.map((category) => ({ cat_name: category.cat_name_en }));
 }
 
 export default async function Page({ params, searchParams }) {
@@ -20,7 +19,7 @@ export default async function Page({ params, searchParams }) {
         <h4>{cat_name.split("%20").join(" ")}</h4>
       </div>
       {categoryData?.length > 0 &&
-        categoryData.map((subcat, i) => <DuaGallery key={i} subcat={subcat} />)}
+        categoryData?.map((subcat, i) => <DuaGallery key={i} subcat={subcat} />)}
     </div>
   );
 }
