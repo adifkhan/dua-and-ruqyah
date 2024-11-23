@@ -1,8 +1,10 @@
 import Database from "better-sqlite3";
+import path from "path";
 
 export async function fetchCategories() {
-  const db = new Database("./db/dua_main.sqlite", { readonly: true });
+  const dbPath = path.join(process.cwd(), "public", "db", "dua_main.sqlite");
 
+  const db = new Database(dbPath, { readonly: true });
   try {
     const query = "SELECT * FROM category";
     const categories = db.prepare(query).all();
@@ -16,8 +18,8 @@ export async function fetchCategories() {
 }
 
 export async function fetchCategoryWiseData(cat_id) {
-  const db = new Database("./db/dua_main.sqlite", { readonly: true });
-
+  const dbPath = path.join(process.cwd(), "public", "db", "dua_main.sqlite");
+  const db = new Database(dbPath, { readonly: true });
   try {
     const subCategories = db.prepare(`SELECT * FROM sub_category WHERE cat_id = ?`).all(cat_id);
 
